@@ -1,0 +1,2 @@
+python words.py
+PAUSE
