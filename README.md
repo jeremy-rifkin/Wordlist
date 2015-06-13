@@ -1,5 +1,5 @@
 # Wordlist
-Ever needed a giant list of almost all the words in the eglish language? Than you've come to the right place. The `master.txt` file contains just over 310 thousand words. Enjoy!
+Ever needed a giant list of the words in the English language? Than you've come to the right place. The `master.txt` file contains just over 170.5k English words. Enjoy!
 
 # Resources
 This wordlist is compiled by a Python program using the following resources:
