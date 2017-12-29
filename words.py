@@ -1,47 +1,39 @@
-'''''''''''''''''''''''''''
-''  Copyright (c) 2015   ''
-'''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''
+''  Copyright (c) FelisPhasma 2015   ''
+'''''''''''''''''''''''''''''''''''''''
 import time
 import os
 current_milli_time = lambda: int(round(time.time() * 1000))
 start = current_milli_time()
 sourcePath = "res/"
-sourceFiles = ['a.txt', 'b.txt', 'c.txt', 'd.txt']
-def compileWords():
-	with open('tmp.txt', 'w+') as outfile:
-		for fname in sourceFiles:
-			with open(sourcePath + fname, "r") as infile:
-				for line in infile:
-					outfile.write(line)
-def reSort():
-	outputFile = open("master.txt", "w+")
-	with open('dupes.txt', 'r') as r:
-		for line in sorted(r):
-			outputFile.write(line.capitalize())
-	os.remove("dupes.txt")
-def removeDuplicates():
-	lines_seen = set() # holds lines already seen
-	outfile = open("dupes.txt", "w+")
-	for line in open("tmp.txt", "r"):
-		if line not in lines_seen: # not a duplicate
-			outfile.write(line)
-			lines_seen.add(line)
-	outfile.close()
-	os.remove("tmp.txt")
+sourceFiles = ['a.txt', 'c.txt', 'd.txt', 'e.txt']
+#'b.txt',
+# B excluded because of ascii control characters
 def end():
 	execTime = current_milli_time() - start
-	print "Execution time:", str(current_milli_time() - start), "ms"
-	print "Execution time:", str((current_milli_time() - start) / 1000), "sec"
-	print "Execution time:", str((current_milli_time() - start) / (60 * 1000)), "min"
-	print "Execution time:", str(((current_milli_time() - start) / (60 * 1000)) / 60), "hr"
-
-def initSequence():
-	print "Init"
-	compileWords()
-	print "Compiled"
-	removeDuplicates()
-	print "Duplicates removed"
-	reSort()
-	print "Sorted"
+	print "Execution time: ", str(current_milli_time() - start), "ms"
+	print "Execution time: ", str((current_milli_time() - start) / 1000), "sec"
+	print "Execution time: ", str((current_milli_time() - start) / (60 * 1000)), "min"
+	print "Execution time: ", str(((current_milli_time() - start) / (60 * 1000)) / 60), "hr"
+def init():
+	print("Init")
+	tList = set()
+	for fname in sourceFiles:
+		with open(sourcePath + fname, "r") as infile:
+			for line in infile:
+				tList.add(line.lower().capitalize())
+	print("Words compiled")
+	dList = set()
+	for i in tList:
+		if i not in dList:
+			dList.add(i)
+	tList = None
+	print("Duplicates removed")
+	output = sorted(dList)
+	dList = None
+	outputFile = open("master.txt", "w+")
+	for line in output:
+		outputFile.write(line)
 	end()
-initSequence()
+	print("Done")
+init()

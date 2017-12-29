@@ -1,5 +1,7 @@
 # Wordlist
-Ever needed a giant list of the words in the English language? Than you've come to the right place. The `master.txt` file contains just over 170.5k English words. Enjoy!
+Many English word lists can be found online, however, they all vary in length, meaning they each have discrepancies. This project compiles multiple word lists into one master list.
+
+`master.txt` contains almost 300,000 words.
 
 # Resources
 This wordlist is compiled by a Python program using the following resources:
@@ -10,6 +12,7 @@ This wordlist is compiled by a Python program using the following resources:
 | b.txt     | 69903         | http://www-personal.umich.edu/~jlawler/wordlist                          |
 | c.txt     | 109583        | http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt |
 | d.txt     | 58110         | http://www.mieliestronk.com/corncob_lowercase.txt                        |
+| e.txt     | 274926        |  |
 
 # Licence
 ![http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
