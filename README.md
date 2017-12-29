@@ -1,4 +1,7 @@
 # Wordlist
+
+![Word List image](https://raw.githubusercontent.com/FelisPhasma/Wordlist/graphic/graphic/image3.png)
+
 Many English word lists can be found online, however, they all vary in length, meaning they each have discrepancies. This project compiles multiple word lists into one master list.
 
 `master.txt` contains almost 300,000 words.
