@@ -1,8 +1,6 @@
 # Wordlist
 
-<p style="text-align:center">
-<img src="https://raw.githubusercontent.com/jeremy-rifkin/Wordlist/graphic/graphic/image3.png" alt="Word List Image" style="max-width:50%">
-</p>
+![Word List image](https://raw.githubusercontent.com/jeremy-rifkin/Wordlist/graphic/graphic/image3.png)
 
 The objective of this project is to combine the many English word lists available on the internet into one more complete master list.
 
