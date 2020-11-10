@@ -19,7 +19,8 @@ def main():
 	sys.stderr.write("Starting aggregator.\n")
 	start = time.time()
 	
-	words = {} # Would initialize this dict to be large if python would let me to save the effort of continuous re-hashing, but oh well. This should run fast anyway.
+	# would use a set but for some reason a dictionary gets better performance
+	words = {}
 
 	for fpath in files:
 		with open(fpath, "r") as f:
